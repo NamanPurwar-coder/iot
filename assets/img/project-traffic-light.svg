@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="trafficTitle">
+  <title id="trafficTitle">A model traffic light glowing red with a toy car waiting on a road</title>
+  <defs>
+    <linearGradient id="trafficBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f2ff"/>
+      <stop offset="1" stop-color="#f9fcff"/>
+    </linearGradient>
+    <radialGradient id="trafficRedGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff8a80" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ff5a5f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#trafficBg)"/>
+  <circle cx="70" cy="62" r="28" fill="#ffcc4d"/>
+  <g stroke="#ffcc4d" stroke-width="4" stroke-linecap="round">
+    <path d="M70 20v-8M70 112v-8M28 62h-8M120 62h-8M41 33l-6-6M105 97l-6-6M99 33l6-6M35 97l6-6"/>
+  </g>
+  <g fill="#fff">
+    <path d="M330 54c0-9 8-16 18-16 7 0 13 4 16 10 2-1 4-1 6-1 9 0 16 7 16 16H330z" opacity=".95"/>
+    <path d="M382 88c0-7 6-12 13-12 5 0 10 3 12 8 2-1 4-1 5-1 7 0 12 5 12 12h-42z" opacity=".8"/>
+    <path d="M158 38c0-6 5-11 12-11 4 0 8 2 10 6 1 0 3-1 4-1 6 0 11 5 11 11h-37z" opacity=".8"/>
+  </g>
+  <g stroke="#9fbde8" stroke-width="2.5" stroke-linecap="round" opacity=".6">
+    <path d="M14 132h38l12-12h34"/>
+    <path d="M466 168h-40l-12 12h-22"/>
+    <circle cx="100" cy="120" r="3.5" fill="#9fbde8" stroke="none"/>
+  </g>
+
+  <!-- road -->
+  <rect x="0" y="270" width="480" height="50" fill="#475569"/>
+  <rect x="0" y="270" width="480" height="7" fill="#94a3b8"/>
+  <g stroke="#f8fafc" stroke-width="4" stroke-linecap="round">
+    <path d="M22 300h26"/><path d="M86 300h26"/><path d="M150 300h26"/><path d="M214 300h26"/><path d="M278 300h26"/><path d="M342 300h26"/><path d="M406 300h26"/>
+  </g>
+  <path d="M0 270h480" stroke="#11263f" stroke-width="4"/>
+
+  <ellipse cx="241" cy="268" rx="70" ry="8" fill="#11263f" opacity=".22"/>
+
+  <!-- traffic light housing -->
+  <circle cx="240" cy="104" r="54" fill="url(#trafficRedGlow)"/>
+  <rect x="232" y="246" width="16" height="30" fill="#52627a" stroke="#11263f" stroke-width="4"/>
+  <rect x="214" y="264" width="52" height="11" rx="5" fill="#334155" stroke="#11263f" stroke-width="3"/>
+  <rect x="188" y="56" width="104" height="198" rx="26" fill="#1e2c44" stroke="#11263f" stroke-width="5"/>
+  <rect x="200" y="68" width="80" height="174" rx="18" fill="#142137"/>
+  <path d="M210 88h60" stroke="#42526b" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- lights -->
+  <circle cx="240" cy="111" r="24" fill="#ff5a5f" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="240" cy="111" r="13" fill="#ffb3a7" opacity=".85"/>
+  <path d="M232 102c3-3 7-4 11-3" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <circle cx="240" cy="163" r="24" fill="#4a4127" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="240" cy="215" r="24" fill="#25442f" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="240" cy="163" r="9" fill="#ffcc4d" opacity=".2"/>
+  <circle cx="240" cy="215" r="9" fill="#4ade80" opacity=".2"/>
+
+  <!-- glow rays -->
+  <g stroke="#ff8a80" stroke-width="3" stroke-linecap="round" opacity=".8">
+    <path d="M204 86l-9-9M276 86l9-9M202 111h-13M278 111h13"/>
+  </g>
+
+  <!-- little car -->
+  <g>
+    <path d="M58 251l12-20c3-5 8-8 14-8h38c6 0 11 3 14 8l12 20z" fill="#ff6b5e" stroke="#11263f" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M82 230h18v16H70z" fill="#bde3ff" stroke="#11263f" stroke-width="3"/>
+    <path d="M110 230h18l10 16h-28z" fill="#bde3ff" stroke="#11263f" stroke-width="3"/>
+    <rect x="46" y="247" width="128" height="22" rx="11" fill="#ff6b5e" stroke="#11263f" stroke-width="4.5"/>
+    <circle cx="80" cy="271" r="13" fill="#11263f"/>
+    <circle cx="80" cy="271" r="5" fill="#cbd5e1"/>
+    <circle cx="142" cy="271" r="13" fill="#11263f"/>
+    <circle cx="142" cy="271" r="5" fill="#cbd5e1"/>
+    <rect x="158" y="253" width="9" height="7" rx="3" fill="#ffd166" stroke="#11263f" stroke-width="2.5"/>
+  </g>
+
+  <!-- stop marks -->
+  <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round" opacity=".9">
+    <path d="M182 288h-14"/>
+    <path d="M188 280h-26"/>
+  </g>
+
+  <g fill="#94a3b8">
+    <circle cx="414" cy="236" r="3"/>
+    <circle cx="432" cy="224" r="2"/>
+  </g>
+</svg>

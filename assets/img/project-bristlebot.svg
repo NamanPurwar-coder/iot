@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="bristleTitle">
+  <title id="bristleTitle">A smiling bristle bot made from a toothbrush, coin battery and vibration motor</title>
+  <defs>
+    <linearGradient id="bristleBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff6e9"/>
+      <stop offset="1" stop-color="#ffe1cb"/>
+    </linearGradient>
+    <linearGradient id="bristleHandle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b9bff"/>
+      <stop offset="1" stop-color="#2f6bff"/>
+    </linearGradient>
+    <linearGradient id="bristleMetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1f5f9"/>
+      <stop offset="1" stop-color="#b8c4d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#bristleBg)"/>
+  <circle cx="410" cy="64" r="44" fill="#ffd166" opacity=".3"/>
+  <circle cx="62" cy="252" r="56" fill="#ff9f75" opacity=".18"/>
+
+  <g stroke="#f0a06c" stroke-width="3" stroke-linecap="round" opacity=".7">
+    <path d="M22 94h20l12 12h30"/>
+    <path d="M458 214h-30l-12-12h-22"/>
+    <path d="M24 172h32l10-10h26"/>
+    <circle cx="84" cy="106" r="4" fill="#f0a06c" stroke="none"/>
+  </g>
+
+  <ellipse cx="246" cy="278" rx="172" ry="15" fill="#d97742" opacity=".16"/>
+
+  <!-- motion trails -->
+  <g stroke="#ff9f75" stroke-width="5" stroke-linecap="round" opacity=".8">
+    <path d="M62 138c18-8 32 4 50-4"/>
+    <path d="M44 172c24-10 40 6 66-4"/>
+    <path d="M66 206c16-6 28 4 44-2"/>
+  </g>
+  <g fill="#ffd166">
+    <circle cx="330" cy="76" r="7" opacity=".8"/>
+    <circle cx="360" cy="98" r="4" opacity=".7"/>
+    <path d="M394 138v18M385 147h18" stroke="#ff6b5e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M62 74v12M56 80h12" stroke="#2f6bff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- motor and weight -->
+  <circle cx="336" cy="155" r="16" fill="#f6c453" stroke="#11263f" stroke-width="4"/>
+  <path d="M336 139v32" stroke="#11263f" stroke-width="3"/>
+  <rect x="278" y="136" width="48" height="34" rx="13" fill="url(#bristleMetal)" stroke="#11263f" stroke-width="4.5"/>
+  <path d="M288 140v26M300 140v26M312 140v26" stroke="#9aa9bc" stroke-width="3" stroke-linecap="round"/>
+  <path d="M278 153h-16" stroke="#11263f" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- wires -->
+  <path d="M286 136c-6-20-24-16-34-30" stroke="#11263f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M286 136c-6-20-24-16-34-30" stroke="#ff6b5e" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M318 136c14-14 4-26 0-38" stroke="#11263f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M318 136c14-14 4-26 0-38" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- coin battery -->
+  <path d="M224 154c-12 0-20-8-20-19s9-19 20-19 22 8 22 19-10 19-22 19z" fill="#e2e8f0" stroke="#11263f" stroke-width="4.5"/>
+  <path d="M224 145c-8 0-13-5-13-11s6-10 13-10 15 4 15 10-7 11-15 11z" fill="#f8fbff" stroke="#b8c4d4" stroke-width="2.5"/>
+  <path d="M224 128v12M218 134h12" stroke="#11263f" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- brush body -->
+  <path d="M134 190c0-15 12-27 27-27h196c15 0 27 12 27 27s-12 27-27 27H161c-15 0-27-12-27-27z" fill="url(#bristleHandle)" stroke="#11263f" stroke-width="5"/>
+  <path d="M146 182h190" stroke="#8eb8ff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  <circle cx="165" cy="191" r="17" fill="#f8fbff" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="207" cy="191" r="17" fill="#f8fbff" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="171" cy="195" r="7" fill="#11263f"/>
+  <circle cx="213" cy="195" r="7" fill="#11263f"/>
+  <circle cx="174" cy="191" r="2.5" fill="#fff"/>
+  <circle cx="216" cy="191" r="2.5" fill="#fff"/>
+  <path d="M176 212c6 7 20 7 26 0" stroke="#11263f" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M260 180c8-5 18-5 26 0" stroke="#11263f" stroke-width="3.5" stroke-linecap="round" opacity=".7"/>
+
+  <!-- bristles -->
+  <g stroke="#7fdcff" stroke-width="7" stroke-linecap="round">
+    <path d="M152 217v27"/><path d="M172 217v27"/><path d="M192 217v27"/><path d="M212 217v27"/>
+    <path d="M232 217v27"/><path d="M252 217v27"/><path d="M272 217v27"/><path d="M292 217v27"/>
+    <path d="M312 217v27"/><path d="M332 217v27"/><path d="M352 217v27"/>
+  </g>
+  <g stroke="#bdf2ff" stroke-width="2.5" stroke-linecap="round">
+    <path d="M152 223v18"/><path d="M192 223v18"/><path d="M232 223v18"/><path d="M272 223v18"/><path d="M312 223v18"/><path d="M352 223v18"/>
+  </g>
+
+  <!-- dust -->
+  <g fill="#e8b18d">
+    <circle cx="382" cy="240" r="8" opacity=".7"/>
+    <circle cx="402" cy="226" r="5" opacity=".5"/>
+    <circle cx="396" cy="256" r="4" opacity=".6"/>
+  </g>
+
+  <path d="M110 112l12 12m0-12l-12 12" stroke="#ff6b5e" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="424" cy="176" r="4" fill="#2f6bff"/>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="plantTitle">
+  <title id="plantTitle">A self-watering plant with a soil moisture sensor wired to an Arduino and a water reservoir</title>
+  <defs>
+    <linearGradient id="plantBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0fbe5"/>
+      <stop offset="1" stop-color="#dff6d6"/>
+    </linearGradient>
+    <linearGradient id="potGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9f75"/>
+      <stop offset="1" stop-color="#e8684a"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7ee787"/>
+      <stop offset="1" stop-color="#20a34a"/>
+    </linearGradient>
+    <radialGradient id="plantSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffe28a" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffe28a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#plantBg)"/>
+  <circle cx="412" cy="68" r="54" fill="url(#plantSun)"/>
+  <circle cx="412" cy="68" r="24" fill="#ffd166" stroke="#11263f" stroke-width="4"/>
+  <g stroke="#ffd166" stroke-width="3.5" stroke-linecap="round">
+    <path d="M412 30v-9M412 106v9M374 68h-9M450 68h9M385 41l-6-6M439 95l6 6M439 41l6-6M385 95l6 6"/>
+  </g>
+  <g fill="#fff" opacity=".85">
+    <path d="M56 82c0-7 6-13 13-13 5 0 10 3 11 8 2-1 3-1 4-1 7 0 12 5 12 12H56z"/>
+  </g>
+  <g stroke="#92c977" stroke-width="2.5" stroke-linecap="round" opacity=".5">
+    <path d="M-10 132h40l14 14h32"/>
+    <path d="M490 116h-36l-14 14h-30"/>
+    <circle cx="84" cy="146" r="4" fill="#92c977" stroke="none"/>
+    <circle cx="402" cy="136" r="4" fill="#92c977" stroke="none"/>
+  </g>
+
+  <path d="M40 274h400" stroke="#a8d38f" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="248" cy="276" rx="186" ry="15" fill="#2f6b1f" opacity=".1"/>
+
+  <!-- reservoir / pump -->
+  <rect x="46" y="196" width="76" height="66" rx="12" fill="#eaf6ff" stroke="#11263f" stroke-width="4.5"/>
+  <path d="M52 234c10-5 20 5 30 0s20 5 30 0v20c0 4-3 6-7 6H59c-4 0-7-2-7-6z" fill="#60a5fa"/>
+  <path d="M52 214h64" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+  <rect x="70" y="186" width="28" height="12" rx="5" fill="#ffcc4d" stroke="#11263f" stroke-width="3.5"/>
+  <path d="M84 186c0-20 28-18 34-32" stroke="#11263f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M84 186c0-20 28-18 34-32" stroke="#bde3ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M110 156l8-4c6 16 2 30-8 40" stroke="#11263f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M110 156l8-4c6 16 2 30-8 40" stroke="#bde3ff" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M105 196c-2 6-2 12 0 18" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- droplets -->
+  <g fill="#60a5fa">
+    <path d="M112 196c0-6 7-13 7-13s7 7 7 13a7 7 0 0 1-14 0z"/>
+    <path d="M126 224c0-5 5-10 5-10s5 5 5 10a5 5 0 0 1-10 0z" opacity=".7"/>
+    <circle cx="104" cy="224" r="4" opacity=".6"/>
+  </g>
+
+  <!-- pot -->
+  <path d="M184 196h118l-13 72H197z" fill="url(#potGrad)" stroke="#11263f" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="174" y="182" width="138" height="22" rx="8" fill="#ffb08c" stroke="#11263f" stroke-width="4.5"/>
+  <ellipse cx="243" cy="186" rx="56" ry="9" fill="#5b3a29"/>
+  <path d="M200 210h84" stroke="#ffd0bd" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+
+  <!-- plant -->
+  <path d="M243 186c-2-32 2-60 3-82" stroke="#1f7a3d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M244 150c-22-6-36-24-36-46 24-1 40 16 40 38" fill="url(#leafGrad)" stroke="#11263f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M245 128c22-6 34-26 32-48-23 0-38 19-37 41" fill="url(#leafGrad)" stroke="#11263f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M245 170c-16-2-26-14-28-30 17 0 28 12 30 26" fill="#a7ec8e" stroke="#11263f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M246 112c14-2 22-12 24-26-15 0-24 11-25 23" fill="#a7ec8e" stroke="#11263f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M240 104c1-22 2-30 6-42" stroke="#1f7a3d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M214 134c9 2 18 8 22 16M264 112c-8 5-13 11-16 18" stroke="#1f7a3d" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+
+  <!-- moisture sensor -->
+  <g transform="rotate(14 296 200)">
+    <rect x="286" y="142" width="20" height="66" rx="7" fill="#e2e8f0" stroke="#11263f" stroke-width="4"/>
+    <path d="M289 188v24M303 188v24" stroke="#11263f" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="296" cy="156" r="4" fill="#20b26b"/>
+    <path d="M296 142v-22" stroke="#11263f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Arduino -->
+  <g>
+    <rect x="338" y="202" width="102" height="68" rx="10" fill="#0b9b96" stroke="#11263f" stroke-width="4.5"/>
+    <rect x="346" y="195" width="52" height="10" rx="3" fill="#11263f"/>
+    <rect x="352" y="224" width="34" height="26" rx="4" fill="#0b2b3a"/>
+    <circle cx="408" cy="216" r="5" fill="#b6f24a" stroke="#11263f" stroke-width="2"/>
+    <path d="M384 216h28M384 222h20" stroke="#9df3ee" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M306 142c22-2 22 56 40 60" stroke="#11263f" stroke-width="6" stroke-linecap="round"/>
+    <path d="M306 142c22-2 22 56 40 60" stroke="#ff6b5e" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M306 136c30-18 24 56 42 55" stroke="#11263f" stroke-width="6" stroke-linecap="round"/>
+    <path d="M306 136c30-18 24 56 42 55" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- sparkles -->
+  <g stroke="#2f9e44" stroke-width="3" stroke-linecap="round" opacity=".8">
+    <path d="M172 118v12M166 124h12"/>
+    <path d="M330 86v14M323 93h14"/>
+  </g>
+  <circle cx="354" cy="158" r="4" fill="#ffcc4d"/>
+  <circle cx="156" cy="238" r="5" fill="#ff6b5e"/>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="lineTitle">
+  <title id="lineTitle">A line-following robot with infrared sensor eyes tracking a black line</title>
+  <defs>
+    <linearGradient id="lineBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3edff"/>
+      <stop offset="1" stop-color="#e2e8ff"/>
+    </linearGradient>
+    <linearGradient id="lineBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ede9fe"/>
+    </linearGradient>
+    <radialGradient id="lineRedGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff8a80" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ff5a5f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#lineBg)"/>
+  <g stroke="#aa9bf0" stroke-width="2.5" stroke-linecap="round" opacity=".5">
+    <path d="M-10 58h50l16 16h48"/>
+    <path d="M490 82h-44l-16 16h-40"/>
+    <path d="M22 128h34"/>
+    <circle cx="104" cy="74" r="4" fill="#aa9bf0" stroke="none"/>
+    <circle cx="398" cy="98" r="4" fill="#aa9bf0" stroke="none"/>
+  </g>
+  <circle cx="392" cy="246" r="60" fill="#8b5cf6" opacity=".08"/>
+  <circle cx="72" cy="90" r="34" fill="#b6f24a" opacity=".22"/>
+
+  <!-- black line track -->
+  <path d="M-20 268C70 220 120 300 216 264S352 200 500 248" stroke="#11263f" stroke-width="24" stroke-linecap="round"/>
+  <path d="M-20 268C70 220 120 300 216 264S352 200 500 248" stroke="#475569" stroke-width="14" stroke-linecap="round"/>
+  <path d="M-20 268C70 220 120 300 216 264S352 200 500 248" stroke="#f8fafc" stroke-width="3" stroke-dasharray="10 12" stroke-linecap="round" opacity=".8"/>
+
+  <!-- direction arrows -->
+  <g fill="#8b5cf6" opacity=".55">
+    <path d="M84 202l14-6-4 14z"/>
+    <path d="M368 206l14 4-10 10z"/>
+  </g>
+
+  <ellipse cx="240" cy="256" rx="92" ry="12" fill="#4c1d95" opacity=".12"/>
+
+  <!-- wheels -->
+  <circle cx="196" cy="222" r="26" fill="#1f2937" stroke="#11263f" stroke-width="4.5"/>
+  <circle cx="196" cy="222" r="10" fill="#cbd5e1" stroke="#11263f" stroke-width="3"/>
+  <circle cx="304" cy="222" r="26" fill="#1f2937" stroke="#11263f" stroke-width="4.5"/>
+  <circle cx="304" cy="222" r="10" fill="#cbd5e1" stroke="#11263f" stroke-width="3"/>
+
+  <!-- sensor beams -->
+  <circle cx="218" cy="224" r="7" fill="#ff5a5f" stroke="#11263f" stroke-width="3"/>
+  <circle cx="282" cy="224" r="7" fill="#ff5a5f" stroke="#11263f" stroke-width="3"/>
+  <path d="M218 232l-10 22h20z" fill="#ff5a5f" opacity=".18"/>
+  <path d="M282 232l-10 22h20z" fill="#ff5a5f" opacity=".18"/>
+  <circle cx="218" cy="224" r="18" fill="url(#lineRedGlow)"/>
+  <circle cx="282" cy="224" r="18" fill="url(#lineRedGlow)"/>
+
+  <!-- body -->
+  <rect x="166" y="128" width="168" height="92" rx="22" fill="url(#lineBody)" stroke="#11263f" stroke-width="5"/>
+  <rect x="180" y="188" width="140" height="18" rx="9" fill="#8b5cf6"/>
+  <circle cx="226" cy="158" r="15" fill="#eef2ff" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="226" cy="158" r="6" fill="#11263f"/>
+  <circle cx="282" cy="158" r="15" fill="#eef2ff" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="282" cy="158" r="6" fill="#11263f"/>
+  <path d="M238 177c5 5 13 5 18 0" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round"/>
+
+  <path d="M250 128V100" stroke="#11263f" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="250" cy="92" r="10" fill="#ffcc4d" stroke="#11263f" stroke-width="4"/>
+
+  <circle cx="250" cy="238" r="9" fill="#11263f"/>
+  <circle cx="250" cy="238" r="3" fill="#94a3b8"/>
+
+  <!-- motion lines -->
+  <g stroke="#8b5cf6" stroke-width="4" stroke-linecap="round" opacity=".5">
+    <path d="M54 158h34"/>
+    <path d="M38 178h44"/>
+    <path d="M60 198h24"/>
+  </g>
+
+  <!-- star sparkles -->
+  <g stroke="#8b5cf6" stroke-width="3.5" stroke-linecap="round">
+    <path d="M350 96v14M343 103h14"/>
+    <path d="M120 120v10M115 125h10"/>
+    <path d="M408 162v12M402 168h12"/>
+  </g>
+  <circle cx="402" cy="66" r="5" fill="#ff6b5e"/>
+  <circle cx="66" cy="222" r="4" fill="#22c55e"/>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="binTitle">
+  <title id="binTitle">A smart dustbin with an automatically opening lid and a scrap of paper flying in</title>
+  <defs>
+    <linearGradient id="binBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9fdf4"/>
+      <stop offset="1" stop-color="#d5f3e6"/>
+    </linearGradient>
+    <linearGradient id="binBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e8f1fd"/>
+    </linearGradient>
+    <linearGradient id="binLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b9bff"/>
+      <stop offset="1" stop-color="#2f6bff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#binBg)"/>
+  <circle cx="414" cy="68" r="46" fill="#b6f24a" opacity=".22"/>
+  <g stroke="#74cbb1" stroke-width="2.5" stroke-linecap="round" opacity=".55">
+    <path d="M-10 70h48l16 16h56"/>
+    <path d="M490 96h-38l-16 16h-44"/>
+    <path d="M22 248h44l12-12h30"/>
+    <circle cx="110" cy="86" r="4" fill="#74cbb1" stroke="none"/>
+    <circle cx="394" cy="112" r="4" fill="#74cbb1" stroke="none"/>
+  </g>
+
+  <ellipse cx="244" cy="282" rx="180" ry="15" fill="#0f766e" opacity=".12"/>
+  <path d="M34 280h414" stroke="#a7dfcf" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- paper ball -->
+  <g>
+    <path d="M112 88l18-14 24 6 10 22-8 22-24 8-20-12-6-20z" fill="#ffd166" stroke="#11263f" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M124 100l14 12 16-18M136 130l-6-22 22-8" stroke="#d6a520" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    <path d="M152 70c22 18 30 44 24 68" stroke="#2f6bff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="3 11"/>
+    <path d="M180 134l-9-8m9 8l-12 2" stroke="#2f6bff" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <g fill="#ffd166">
+    <circle cx="70" cy="132" r="5"/>
+    <circle cx="90" cy="110" r="3"/>
+    <path d="M58 96v12M52 102h12" stroke="#ffb64d" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- sensor waves -->
+  <g stroke="#2f6bff" stroke-width="3" stroke-linecap="round" opacity=".55">
+    <path d="M182 172c-10 8-10 20 0 28"/>
+    <path d="M170 164c-16 13-16 33 0 46"/>
+  </g>
+
+  <!-- bin -->
+  <g transform="rotate(18 330 130)">
+    <rect x="142" y="112" width="196" height="30" rx="15" fill="url(#binLid)" stroke="#11263f" stroke-width="4.5"/>
+    <path d="M162 119h148" stroke="#9dbdff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  </g>
+  <circle cx="330" cy="132" r="12" fill="#ffcc4d" stroke="#11263f" stroke-width="4"/>
+  <circle cx="330" cy="132" r="4" fill="#11263f"/>
+
+  <path d="M158 142h176l-14 122c-.8 7-6.6 12-13.6 12H186c-7 0-12.8-5-13.6-12L158 142z" fill="url(#binBody)" stroke="#11263f" stroke-width="5"/>
+  <path d="M166 148h160" stroke="#cfdcec" stroke-width="4" stroke-linecap="round"/>
+  <path d="M176 246h140" stroke="#d7e3f2" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- sensor -->
+  <circle cx="222" cy="177" r="10" fill="#cbd5e1" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="222" cy="177" r="4" fill="#334155"/>
+  <circle cx="252" cy="177" r="10" fill="#cbd5e1" stroke="#11263f" stroke-width="3.5"/>
+  <circle cx="252" cy="177" r="4" fill="#334155"/>
+  <rect x="206" y="162" width="62" height="31" rx="12" stroke="#11263f" stroke-width="2.5" stroke-dasharray="4 6" opacity=".5"/>
+
+  <!-- recycle leaf badge -->
+  <rect x="207" y="204" width="66" height="47" rx="12" fill="#edfdf6" stroke="#11263f" stroke-width="3.5"/>
+  <path d="M240 240c-11-2-14-14-8-22 5-7 16-8 24-3 1 9-3 22-16 25z" fill="#20b26b" stroke="#11263f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M233 237c3-8 9-13 18-16" stroke="#b6f24a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <circle cx="195" cy="274" r="10" fill="#11263f"/>
+  <circle cx="300" cy="274" r="10" fill="#11263f"/>
+  <circle cx="195" cy="274" r="3" fill="#94a3b8"/>
+  <circle cx="300" cy="274" r="3" fill="#94a3b8"/>
+
+  <path d="M376 186l12 12m0-12l-12 12" stroke="#ff6b5e" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="88" cy="240" r="4" fill="#2f6bff"/>
+  <circle cx="406" cy="250" r="5" fill="#ffcc4d"/>
+</svg>

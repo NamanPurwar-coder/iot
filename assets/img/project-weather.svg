@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="weatherTitle">
+  <title id="weatherTitle">A weather station with an anemometer, solar panel and display showing temperature and humidity</title>
+  <defs>
+    <linearGradient id="weatherBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff1dd"/>
+      <stop offset=".6" stop-color="#e8f5ff"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="weatherScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17304f"/>
+      <stop offset="1" stop-color="#0b1b33"/>
+    </linearGradient>
+    <linearGradient id="weatherPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b9bff"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#weatherBg)"/>
+  <circle cx="392" cy="72" r="34" fill="#ffd166" stroke="#11263f" stroke-width="4"/>
+  <g stroke="#ffd166" stroke-width="4" stroke-linecap="round">
+    <path d="M392 24v-8M392 120v8M344 72h-8M440 72h8M358 38l-6-6M426 106l6 6M426 38l6-6M358 106l-6 6"/>
+  </g>
+  <g fill="#fff">
+    <path d="M50 78c0-9 8-16 17-16 7 0 13 4 15 10 2-1 4-1 6-1 8 0 15 7 15 15H50z" opacity=".95"/>
+    <path d="M240 52c0-7 6-12 13-12 5 0 10 3 12 8 1-1 3-1 4-1 6 0 11 5 11 11h-40z" opacity=".8"/>
+  </g>
+  <g stroke="#9fc0e8" stroke-width="2.5" stroke-linecap="round" opacity=".55">
+    <path d="M-10 136h48l14 14h34"/>
+    <path d="M490 118h-38l-14 14h-28"/>
+    <circle cx="86" cy="150" r="4" fill="#9fc0e8" stroke="none"/>
+    <circle cx="394" cy="132" r="4" fill="#9fc0e8" stroke="none"/>
+    <path d="M282 92c4-4 10-4 14 0M300 96c3-3 8-3 11 0"/>
+  </g>
+
+  <path d="M32 278h416" stroke="#a9c7e2" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="240" cy="280" rx="190" ry="14" fill="#1e3a5f" opacity=".08"/>
+
+  <!-- tripod -->
+  <path d="M196 248l-42 30M196 248l48 30M196 248v24" stroke="#52627a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M196 98v154" stroke="#64748b" stroke-width="9" stroke-linecap="round"/>
+  <path d="M196 98v154" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <rect x="181" y="240" width="30" height="14" rx="6" fill="#334155" stroke="#11263f" stroke-width="3"/>
+
+  <!-- anemometer -->
+  <g>
+    <path d="M196 98V68" stroke="#11263f" stroke-width="5" stroke-linecap="round"/>
+    <g transform="rotate(12 196 68)">
+      <path d="M196 68l-38-12M196 68l38-12M196 68l0 42" stroke="#11263f" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="154" cy="55" r="12" fill="#dbeafe" stroke="#11263f" stroke-width="3.5"/>
+      <path d="M144 51a12 12 0 0 1 20-6" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="238" cy="55" r="12" fill="#dbeafe" stroke="#11263f" stroke-width="3.5"/>
+      <path d="M228 51a12 12 0 0 1 20-6" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="196" cy="114" r="12" fill="#dbeafe" stroke="#11263f" stroke-width="3.5"/>
+      <path d="M186 110a12 12 0 0 1 20-6" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <circle cx="196" cy="68" r="6" fill="#b6f24a" stroke="#11263f" stroke-width="3"/>
+  </g>
+
+  <!-- wind -->
+  <g stroke="#60a5fa" stroke-width="3" stroke-linecap="round" opacity=".6">
+    <path d="M52 170h46M64 182h34M42 194h40"/>
+  </g>
+
+  <!-- solar panel -->
+  <g transform="rotate(-16 128 158)">
+    <rect x="82" y="132" width="92" height="56" rx="6" fill="url(#weatherPanel)" stroke="#11263f" stroke-width="4.5"/>
+    <path d="M113 132v56M144 132v56M82 151h92M82 170h92" stroke="#93c5fd" stroke-width="2.5" opacity=".8"/>
+    <path d="M128 188v22" stroke="#11263f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- sensor shield -->
+  <rect x="174" y="188" width="44" height="50" rx="8" fill="#f8fbff" stroke="#11263f" stroke-width="4"/>
+  <path d="M184 198h24M184 208h24M184 218h24M184 228h24" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="196" cy="181" r="4" fill="#ff6b5e" stroke="#11263f" stroke-width="2"/>
+
+  <!-- display -->
+  <path d="M204 190c24-6 40 6 58 8" stroke="#11263f" stroke-width="4" stroke-linecap="round"/>
+  <rect x="246" y="140" width="176" height="118" rx="18" fill="#f8fbff" stroke="#11263f" stroke-width="5"/>
+  <rect x="258" y="152" width="152" height="94" rx="11" fill="url(#weatherScreen)"/>
+  <circle cx="286" cy="178" r="13" fill="#ffd166"/>
+  <g stroke="#ffd166" stroke-width="2.5" stroke-linecap="round">
+    <path d="M286 158v-4M286 198v4M266 178h-4M306 178h4M272 164l-3-3M300 192l3 3M300 164l3-3M272 192l-3 3"/>
+  </g>
+  <text x="318" y="190" fill="#f8fbff" font-family="Nunito, Segoe UI, sans-serif" font-size="31" font-weight="800">27°</text>
+  <path d="M322 203h54" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="#b6f24a">
+    <rect x="270" y="218" width="7" height="17" rx="3"/>
+    <rect x="282" y="210" width="7" height="25" rx="3"/>
+    <rect x="294" y="222" width="7" height="13" rx="3"/>
+    <rect x="306" y="206" width="7" height="29" rx="3"/>
+  </g>
+  <path d="M318 232h78" stroke="#475569" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M332 204c3 4 3 8 0 12" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+  <circle cx="384" cy="165" r="4" fill="#b6f24a"/>
+  <path d="M372 176c4-4 9-4 13 0M365 183c8-8 19-8 27 0" stroke="#b6f24a" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+
+  <!-- grass -->
+  <g stroke="#65a30d" stroke-width="3.5" stroke-linecap="round">
+    <path d="M62 276c2-9 8-16 14-20M62 276c-4-7-10-12-16-14M84 276c3-6 7-9 11-11"/>
+    <path d="M396 276c2-8 7-13 12-16M396 276c-3-6-8-10-13-12"/>
+  </g>
+  <path d="M358 214l10 10m0-10l-10 10" stroke="#ff6b5e" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="76" cy="210" r="4" fill="#8b5cf6"/>
+</svg>

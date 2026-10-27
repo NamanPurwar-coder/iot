@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="blinkyTitle">
+  <title id="blinkyTitle">An Arduino board wired to a glowing LED on a breadboard</title>
+  <defs>
+    <linearGradient id="blinkyBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf3ff"/>
+      <stop offset="1" stop-color="#d4e4ff"/>
+    </linearGradient>
+    <linearGradient id="blinkyLed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9a76"/>
+      <stop offset="1" stop-color="#ff5a5f"/>
+    </linearGradient>
+    <radialGradient id="blinkyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd166" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#ffb05c" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ffb05c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#blinkyBg)"/>
+
+  <g stroke="#82a9f5" stroke-width="2" opacity=".45" stroke-linecap="round">
+    <path d="M-10 44h44l20 20h52"/>
+    <path d="M492 88h-40l-18 18h-46"/>
+    <path d="M18 286h52l16-16h40"/>
+    <circle cx="108" cy="64" r="4" fill="#82a9f5" stroke="none"/>
+    <circle cx="386" cy="106" r="4" fill="#82a9f5" stroke="none"/>
+    <circle cx="126" cy="270" r="4" fill="#82a9f5" stroke="none"/>
+  </g>
+
+  <ellipse cx="240" cy="286" rx="196" ry="17" fill="#2f6bff" opacity=".08"/>
+  <ellipse cx="137" cy="247" rx="106" ry="12" fill="#11263f" opacity=".12"/>
+
+  <!-- Arduino board -->
+  <rect x="42" y="110" width="196" height="128" rx="16" fill="#0b9b96" stroke="#11263f" stroke-width="5"/>
+  <rect x="28" y="148" width="24" height="42" rx="5" fill="#cbd5e1" stroke="#11263f" stroke-width="4"/>
+  <rect x="33" y="156" width="12" height="26" rx="2" fill="#8194ad"/>
+  <rect x="34" y="202" width="17" height="20" rx="3" fill="#1f2937" stroke="#11263f" stroke-width="3"/>
+  <rect x="74" y="101" width="146" height="16" rx="4" fill="#11263f"/>
+  <rect x="74" y="231" width="146" height="16" rx="4" fill="#11263f"/>
+  <g fill="#f6c453">
+    <rect x="84" y="105" width="4" height="8" rx="1"/>
+    <rect x="98" y="105" width="4" height="8" rx="1"/>
+    <rect x="112" y="105" width="4" height="8" rx="1"/>
+    <rect x="126" y="105" width="4" height="8" rx="1"/>
+    <rect x="140" y="105" width="4" height="8" rx="1"/>
+    <rect x="154" y="105" width="4" height="8" rx="1"/>
+    <rect x="168" y="105" width="4" height="8" rx="1"/>
+    <rect x="182" y="105" width="4" height="8" rx="1"/>
+    <rect x="196" y="105" width="4" height="8" rx="1"/>
+    <rect x="210" y="105" width="4" height="8" rx="1"/>
+    <rect x="84" y="235" width="4" height="8" rx="1"/>
+    <rect x="98" y="235" width="4" height="8" rx="1"/>
+    <rect x="112" y="235" width="4" height="8" rx="1"/>
+    <rect x="126" y="235" width="4" height="8" rx="1"/>
+    <rect x="140" y="235" width="4" height="8" rx="1"/>
+    <rect x="154" y="235" width="4" height="8" rx="1"/>
+    <rect x="168" y="235" width="4" height="8" rx="1"/>
+    <rect x="182" y="235" width="4" height="8" rx="1"/>
+    <rect x="196" y="235" width="4" height="8" rx="1"/>
+    <rect x="210" y="235" width="4" height="8" rx="1"/>
+  </g>
+  <rect x="112" y="157" width="60" height="46" rx="6" fill="#0b2b3a"/>
+  <g stroke="#94a3b8" stroke-width="3">
+    <path d="M118 153v-6M130 153v-6M142 153v-6M154 153v-6M166 153v-6"/>
+    <path d="M118 207v6M130 207v6M142 207v6M154 207v6M166 207v6"/>
+  </g>
+  <circle cx="202" cy="132" r="9" fill="#dbeafe" stroke="#11263f" stroke-width="3"/>
+  <circle cx="202" cy="132" r="3" fill="#11263f"/>
+  <circle cx="218" cy="218" r="4" fill="#b6f24a" stroke="#11263f" stroke-width="2"/>
+  <path d="M64 132h40M64 142h24" stroke="#9df3ee" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <circle cx="76" cy="218" r="10" fill="none" stroke="#9df3ee" stroke-width="3"/>
+  <path d="M72 218l3 3 5-7" stroke="#9df3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- wires -->
+  <path d="M238 200c26 0 20 24 44 24" stroke="#11263f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M238 200c26 0 20 24 44 24" stroke="#ff6b5e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M238 214c22 0 20 34 44 34" stroke="#11263f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M238 214c22 0 20 34 44 34" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- breadboard -->
+  <rect x="278" y="194" width="164" height="72" rx="10" fill="#f8fbff" stroke="#11263f" stroke-width="4"/>
+  <path d="M286 226h148" stroke="#dbe4f0" stroke-width="4"/>
+  <path d="M286 199v60M434 199v60" stroke="#ff6b5e" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <path d="M292 199v60M428 199v60" stroke="#2f6bff" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+  <g fill="#bdcce0">
+    <circle cx="300" cy="205" r="2.6"/><circle cx="314" cy="205" r="2.6"/><circle cx="328" cy="205" r="2.6"/><circle cx="342" cy="205" r="2.6"/><circle cx="356" cy="205" r="2.6"/><circle cx="370" cy="205" r="2.6"/><circle cx="384" cy="205" r="2.6"/><circle cx="398" cy="205" r="2.6"/><circle cx="412" cy="205" r="2.6"/>
+    <circle cx="300" cy="217" r="2.6"/><circle cx="314" cy="217" r="2.6"/><circle cx="328" cy="217" r="2.6"/><circle cx="342" cy="217" r="2.6"/><circle cx="356" cy="217" r="2.6"/><circle cx="370" cy="217" r="2.6"/><circle cx="384" cy="217" r="2.6"/><circle cx="398" cy="217" r="2.6"/><circle cx="412" cy="217" r="2.6"/>
+    <circle cx="300" cy="243" r="2.6"/><circle cx="314" cy="243" r="2.6"/><circle cx="328" cy="243" r="2.6"/><circle cx="342" cy="243" r="2.6"/><circle cx="356" cy="243" r="2.6"/><circle cx="370" cy="243" r="2.6"/><circle cx="384" cy="243" r="2.6"/><circle cx="398" cy="243" r="2.6"/><circle cx="412" cy="243" r="2.6"/>
+    <circle cx="300" cy="256" r="2.6"/><circle cx="314" cy="256" r="2.6"/><circle cx="328" cy="256" r="2.6"/><circle cx="342" cy="256" r="2.6"/><circle cx="356" cy="256" r="2.6"/><circle cx="370" cy="256" r="2.6"/><circle cx="384" cy="256" r="2.6"/><circle cx="398" cy="256" r="2.6"/><circle cx="412" cy="256" r="2.6"/>
+  </g>
+
+  <!-- glowing LED -->
+  <circle cx="360" cy="146" r="74" fill="url(#blinkyGlow)"/>
+  <g stroke="#ffb64d" stroke-width="3.5" stroke-linecap="round" opacity=".9">
+    <path d="M356 82v-13M320 96l-9-9M392 96l9-9M306 132h-13M414 132h13M322 164l-9 9M394 164l9 9"/>
+  </g>
+  <path d="M348 174v34M372 174v34" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M348 174v34M372 174v34" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M332 162a28 28 0 0 1 56 0v12h-56z" fill="url(#blinkyLed)" stroke="#11263f" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M340 157h56" stroke="#11263f" stroke-width="4"/>
+  <path d="M342 140c3-9 10-15 18-17" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+
+  <g stroke="#2f6bff" stroke-width="3.5" stroke-linecap="round">
+    <path d="M300 96v16M292 104h16"/>
+    <path d="M426 116v12M420 122h12"/>
+    <path d="M74 82v10M69 87h10"/>
+  </g>
+  <circle cx="250" cy="82" r="4" fill="#ff6b5e"/>
+  <circle cx="406" cy="84" r="5" fill="#ffcc4d"/>
+</svg>

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboQuest — Build Real Robots | STEM Robotics &amp; IoT for Class 6–8</title>
+  <meta name="description" content="A hands-on robotics and IoT lab for Class 6, 7 and 8. Kids wire circuits, code Arduino projects and build real robots through a complete design-to-showcase journey.">
+  <meta name="theme-color" content="#0b1b33">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="RoboQuest — Build robots. Make ideas move.">
+  <meta property="og:description" content="Hands-on STEM robotics and IoT for Class 6–8. Real circuits, real code, real projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/project-rover.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/extras.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="RoboQuest home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 2 4 14h6l-1 8 9.5-12h-6l1-8Z"/></svg>
+        </span>
+        <span>Robo<span class="logo-accent">Quest</span></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#classes">Class tracks</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#lab">Rover lab</a></li>
+        </ul>
+        <a class="btn btn-lime nav-cta" href="#enroll">
+          Book a free trial
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle" type="button" data-lang-toggle data-no-i18n aria-label="Switch to Hindi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          <span data-lang-label>हिंदी</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-orbs" aria-hidden="true"><span></span><span></span></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow dark">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Robotics &amp; IoT for Class 6–8
+          </span>
+          <h1>Build robots.<br>Make ideas <span class="hero-mark">move.</span></h1>
+          <p class="hero-sub">A hands-on robotics and IoT lab where kids wire real circuits, write real Arduino code, and turn wild ideas into projects they can actually play with.</p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#journey">
+              Explore the journey
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#projects">
+              See student builds
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            </a>
+          </div>
+          <ul class="hero-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No experience needed</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>All kits provided</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Class 6–8</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="bot-stage is-talking" id="botStage">
+            <div class="stage-grid" aria-hidden="true"></div>
+            <div class="speech" id="botSpeech" role="status" aria-live="polite">Hi, I'm Bolt! Tap me for a robot fact.</div>
+
+            <div class="float-chip chip-wifi" aria-hidden="true">
+              <span class="chip-dot green"></span>
+              <span class="chip-title">Wi-Fi</span>
+              <span class="chip-sub">connected</span>
+            </div>
+            <div class="float-chip chip-led" aria-hidden="true">
+              <span class="led-dot"></span>
+              <span class="chip-title">LED 13</span>
+              <span class="chip-pill">ON</span>
+            </div>
+            <div class="float-chip chip-code" aria-hidden="true">
+              <span class="code-comment">// sensor check</span><br>
+              <span>if (d &lt; 25) {</span><br>
+              <strong>&nbsp;&nbsp;stop();</strong><br>
+              <span>}</span>
+            </div>
+
+            <button class="bot-button" id="botButton" type="button" aria-label="Meet Bolt the robot. Activate for a fun robot fact.">
+              <svg class="mascot" viewBox="0 0 520 500" fill="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="botBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f9fcff"/>
+                    <stop offset="1" stop-color="#cbdcef"/>
+                  </linearGradient>
+                  <linearGradient id="botScreen" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#0e2947"/>
+                    <stop offset="1" stop-color="#071526"/>
+                  </linearGradient>
+                  <radialGradient id="botAura" cx="50%" cy="50%" r="50%">
+                    <stop offset="0" stop-color="#2f6bff" stop-opacity=".4"/>
+                    <stop offset="1" stop-color="#2f6bff" stop-opacity="0"/>
+                  </radialGradient>
+                  <radialGradient id="antennaGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0" stop-color="#c8f560" stop-opacity=".55"/>
+                    <stop offset="1" stop-color="#c8f560" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <ellipse cx="260" cy="458" rx="122" ry="17" fill="#020b16" opacity=".55"/>
+                <circle cx="260" cy="380" r="160" fill="url(#botAura)"/>
+                <g class="bot">
+                  <g class="antenna">
+                    <path d="M260 132V88" stroke="#091d34" stroke-width="8" stroke-linecap="round"/>
+                    <circle cx="260" cy="72" r="34" fill="url(#antennaGlow)"/>
+                    <circle cx="260" cy="72" r="15" fill="#c8f560" stroke="#091d34" stroke-width="6"/>
+                  </g>
+                  <rect x="121" y="182" width="27" height="56" rx="12" fill="#2f6bff" stroke="#091d34" stroke-width="6"/>
+                  <circle cx="134.5" cy="210" r="4" fill="#c8f560"/>
+                  <rect x="372" y="182" width="27" height="56" rx="12" fill="#2f6bff" stroke="#091d34" stroke-width="6"/>
+                  <circle cx="385.5" cy="210" r="4" fill="#c8f560"/>
+                  <rect x="146" y="128" width="228" height="168" rx="54" fill="url(#botBody)" stroke="#091d34" stroke-width="7"/>
+                  <rect x="176" y="158" width="168" height="108" rx="34" fill="url(#botScreen)" stroke="#1d3d60" stroke-width="3"/>
+                  <g class="bot-eyes">
+                    <rect class="bot-eye" x="204" y="184" width="24" height="46" rx="12" fill="#6ff0ff"/>
+                    <rect class="bot-eye" x="292" y="184" width="24" height="46" rx="12" fill="#6ff0ff"/>
+                    <rect x="210" y="191" width="6" height="16" rx="3" fill="#d9ffff"/>
+                    <rect x="298" y="191" width="6" height="16" rx="3" fill="#d9ffff"/>
+                  </g>
+                  <path d="M238 236c14 12 30 12 44 0" stroke="#c8f560" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="194" cy="232" r="8" fill="#ff9f8d" opacity=".55"/>
+                  <circle cx="326" cy="232" r="8" fill="#ff9f8d" opacity=".55"/>
+                  <rect x="240" y="292" width="40" height="20" rx="8" fill="#9fb4d1" stroke="#091d34" stroke-width="5"/>
+                  <rect x="184" y="306" width="152" height="84" rx="30" fill="url(#botBody)" stroke="#091d34" stroke-width="7"/>
+                  <rect x="216" y="328" width="88" height="44" rx="14" fill="url(#botScreen)" stroke="#1d3d60" stroke-width="3"/>
+                  <path d="m262 336-14 20h11l-3 15 18-22h-12l3-13z" fill="#c8f560"/>
+                  <circle cx="202" cy="357" r="5" fill="#ff6b5e"/>
+                  <circle cx="214" cy="357" r="5" fill="#ffcc4d"/>
+                  <g class="bot-arm-left">
+                    <path d="M192 326c-28 8-40 36-44 58" stroke="#091d34" stroke-width="26" stroke-linecap="round"/>
+                    <path d="M192 326c-28 8-40 36-44 58" stroke="#dfeaf9" stroke-width="16" stroke-linecap="round"/>
+                    <circle cx="146" cy="388" r="17" fill="#dfeaf9" stroke="#091d34" stroke-width="6"/>
+                    <path d="M136 388h-8M139 380l-6-4M152 380l4-6" stroke="#091d34" stroke-width="4" stroke-linecap="round"/>
+                  </g>
+                  <g class="bot-wave">
+                    <path d="M330 326c30-4 48-28 56-54" stroke="#091d34" stroke-width="26" stroke-linecap="round"/>
+                    <path d="M330 326c30-4 48-28 56-54" stroke="#dfeaf9" stroke-width="16" stroke-linecap="round"/>
+                    <circle cx="391" cy="260" r="18" fill="#dfeaf9" stroke="#091d34" stroke-width="6"/>
+                    <path d="M399 250l7-8M405 262l9-3M388 245l1-8" stroke="#091d34" stroke-width="4" stroke-linecap="round"/>
+                  </g>
+                  <rect x="207" y="386" width="44" height="30" rx="14" fill="#2f6bff" stroke="#091d34" stroke-width="6"/>
+                  <rect x="269" y="386" width="44" height="30" rx="14" fill="#2f6bff" stroke="#091d34" stroke-width="6"/>
+                  <ellipse cx="229" cy="425" rx="24" ry="8" fill="#6ff0ff" opacity=".35"/>
+                  <ellipse cx="291" cy="425" rx="24" ry="8" fill="#6ff0ff" opacity=".35"/>
+                </g>
+                <g opacity=".6">
+                  <circle cx="84" cy="170" r="4" fill="#8fb2d8"/>
+                  <circle cx="438" cy="200" r="3" fill="#8fb2d8"/>
+                  <circle cx="430" cy="130" r="5" fill="#8fb2d8"/>
+                  <path d="M62 300l8 8m0-8-8 8" stroke="#8fb2d8" stroke-width="3" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </button>
+            <span class="tap-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a2 2 0 1 1 4 0v5M13 11V7a2 2 0 1 1 4 0v4M17 11V9a2 2 0 1 1 4 0v7a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6v-4a2 2 0 0 1 4 0"/></svg>
+              tap Bolt
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-wrap" aria-label="RoboQuest at a glance">
+      <div class="container">
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <span class="stat-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></span>
+            <div><strong>28</strong><span>hands-on builds</span></div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon coral" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span>
+            <div><strong>3</strong><span>class tracks</span></div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon purple" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div><strong>1:8</strong><span>mentor ratio</span></div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon green" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><strong>90</strong><span>min weekly lab</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">The project journey</span>
+          <h2>A whole project, from scribble to <span class="hl">showcase.</span></h2>
+          <p>Every build follows the same six-stage loop real engineers use. Kids never just follow instructions — they design, test and improve until it works.</p>
+        </div>
+
+        <div class="journey-stepper" id="journeyStepper" role="tablist" aria-label="Project journey stages" data-reveal>
+          <div class="journey-rail" aria-hidden="true"><span id="journeyProgress"></span></div>
+          <button class="journey-step is-active" id="stage-tab-0" type="button" role="tab" aria-selected="true" aria-controls="journeyPanel" tabindex="0" data-stage="0">
+            <span class="step-dot">01</span><span class="step-label">Discover</span><span class="step-caption">Session 1</span>
+          </button>
+          <button class="journey-step" id="stage-tab-1" type="button" role="tab" aria-selected="false" aria-controls="journeyPanel" tabindex="-1" data-stage="1">
+            <span class="step-dot">02</span><span class="step-label">Sketch</span><span class="step-caption">Session 2</span>
+          </button>
+          <button class="journey-step" id="stage-tab-2" type="button" role="tab" aria-selected="false" aria-controls="journeyPanel" tabindex="-1" data-stage="2">
+            <span class="step-dot">03</span><span class="step-label">Build</span><span class="step-caption">Session 3</span>
+          </button>
+          <button class="journey-step" id="stage-tab-3" type="button" role="tab" aria-selected="false" aria-controls="journeyPanel" tabindex="-1" data-stage="3">
+            <span class="step-dot">04</span><span class="step-label">Code</span><span class="step-caption">Session 4</span>
+          </button>
+          <button class="journey-step" id="stage-tab-4" type="button" role="tab" aria-selected="false" aria-controls="journeyPanel" tabindex="-1" data-stage="4">
+            <span class="step-dot">05</span><span class="step-label">Test &amp; tune</span><span class="step-caption">Session 5</span>
+          </button>
+          <button class="journey-step" id="stage-tab-5" type="button" role="tab" aria-selected="false" aria-controls="journeyPanel" tabindex="-1" data-stage="5">
+            <span class="step-dot">06</span><span class="step-label">Showcase</span><span class="step-caption">Session 6</span>
+          </button>
+        </div>
+
+        <div class="journey-panel" id="journeyPanel" role="tabpanel" aria-labelledby="stage-tab-0" tabindex="0" data-reveal style="--stage-accent:#2f6bff;--stage-tint:#eaf0ff">
+          <div class="journey-side">
+            <div class="journey-icon" id="journeyIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+            </div>
+            <span class="journey-count" id="journeyCount">01 / 06</span>
+            <span class="journey-duration" id="journeyDuration">Session 1 of 6</span>
+          </div>
+          <div class="journey-body">
+            <h3 id="journeyTitle">Start with a real problem</h3>
+            <p id="journeyDesc">Every project opens with a question, not an instruction manual. Could a bin open on its own? How does a rover “see” a wall? Kids unbox the kit, meet the parts and choose a challenge worth solving.</p>
+            <ul class="tick-list" id="journeyList">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Unbox and name every component</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Play with demo circuits and sensors</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Choose a problem they actually care about</li>
+            </ul>
+            <div class="takeaway">
+              <span>Kids walk away with</span>
+              <p id="journeyTakeaway">A challenge, a safety habit and a kit they know their way around.</p>
+            </div>
+            <button class="btn btn-outline journey-next" id="journeyNext" type="button">
+              Next stage
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classes" id="classes">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Three class tracks</span>
+          <h2>Three years. One clear path to <span class="hl">inventor.</span></h2>
+          <p>Each year adds a new superpower: first circuits, then sensors and logic, then connected IoT systems. Same playful method, steadily bigger challenges.</p>
+        </div>
+
+        <div class="track-grid">
+          <article class="track track-6" data-reveal style="--delay:.02s">
+            <div class="track-top">
+              <span class="class-chip">Class 6</span>
+              <span class="track-num" aria-hidden="true">06</span>
+            </div>
+            <h3>Spark Starters</h3>
+            <p class="track-tagline">Electricity, circuits and first bots.</p>
+            <ul class="track-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Circuit safety &amp; parts sense</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>LEDs, resistors &amp; breadboards</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Motors that wiggle, bots that scoot</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Block-to-text coding basics</li>
+            </ul>
+            <div class="track-foot">
+              <span class="track-meta">8 builds · no coding needed</span>
+              <button class="track-link" type="button" data-track="6">See projects
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="track track-7" data-reveal style="--delay:.1s">
+            <div class="track-top">
+              <span class="class-chip">Class 7</span>
+              <span class="track-num" aria-hidden="true">07</span>
+            </div>
+            <h3>Circuit Coders</h3>
+            <p class="track-tagline">Arduino, sensors and robots with reactions.</p>
+            <ul class="track-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Arduino inputs, outputs &amp; code</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Ultrasonic, IR &amp; light sensors</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>If–else logic, loops &amp; functions</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Servos, motor drivers &amp; mechanisms</li>
+            </ul>
+            <div class="track-foot">
+              <span class="track-meta">10 builds · Arduino Uno</span>
+              <button class="track-link" type="button" data-track="7">See projects
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="track track-8" data-reveal style="--delay:.18s">
+            <div class="track-top">
+              <span class="class-chip">Class 8</span>
+              <span class="track-num" aria-hidden="true">08</span>
+            </div>
+            <h3>IoT Inventors</h3>
+            <p class="track-tagline">Smart devices, live data and big ideas.</p>
+            <ul class="track-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Wi-Fi boards &amp; cloud dashboards</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sensor data, logging &amp; automation</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Smart home &amp; sustainability prototypes</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Capstone pitch, demo &amp; portfolio</li>
+            </ul>
+            <div class="track-foot">
+              <span class="track-meta">10 builds · ESP32 + Wi-Fi</span>
+              <button class="track-link" type="button" data-track="8">See projects
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="track-note" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9L12 3Z"/></svg>
+          Every track ends with a Demo Day — families invited, badges earned.
+        </p>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="projects-head">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">The build gallery</span>
+            <h2>Nine projects. A lot of <span class="hl">“whoa.”</span></h2>
+            <p>Real builds from the lab, mapped to each class. Open any build plan to see the parts, the steps and the skills kids pick up.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects by class" data-reveal>
+            <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All builds</button>
+            <button class="filter-btn" type="button" data-filter="6" aria-pressed="false">Class 6</button>
+            <button class="filter-btn" type="button" data-filter="7" aria-pressed="false">Class 7</button>
+            <button class="filter-btn" type="button" data-filter="8" aria-pressed="false">Class 8</button>
+          </div>
+        </div>
+
+        <p class="sr-only" id="filterStatus" aria-live="polite"></p>
+
+        <div class="project-grid" id="projectGrid" data-reveal>
+          <article class="project-card" data-class="6">
+            <div class="project-media">
+              <img src="assets/img/project-blinky.svg" alt="An Arduino board wired to a glowing LED on a breadboard" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 6</span><span class="badge level-starter">Starter</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 sessions</span><span>Arduino</span></div>
+              <h3>Blink Buddy</h3>
+              <p>Your very first circuit: an LED that says hello in your own blink pattern.</p>
+              <button class="project-open" type="button" data-project="blink-buddy" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="6">
+            <div class="project-media">
+              <img src="assets/img/project-bristlebot.svg" alt="A smiling bristle bot built from a toothbrush, coin battery and vibration motor" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 6</span><span class="badge level-starter">Starter</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 sessions</span><span>Motors</span></div>
+              <h3>Bristle Bot</h3>
+              <p>A toothbrush, a coin cell and a tiny motor become a jittering micro-robot.</p>
+              <button class="project-open" type="button" data-project="bristle-bot" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="6">
+            <div class="project-media">
+              <img src="assets/img/project-traffic-light.svg" alt="A model traffic light glowing red with a toy car waiting on a road" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 6</span><span class="badge level-starter">Starter</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 sessions</span><span>LEDs</span></div>
+              <h3>Traffic Light</h3>
+              <p>Wire red, amber and green, then choreograph a safe little intersection.</p>
+              <button class="project-open" type="button" data-project="traffic-light" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="7">
+            <div class="project-media">
+              <img src="assets/img/project-rover.svg" alt="A two-wheeled rover with ultrasonic sensor eyes approaching a traffic cone" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 7</span><span class="badge level-intermediate">Intermediate</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 sessions</span><span>Arduino</span></div>
+              <h3>Obstacle-Avoiding Rover</h3>
+              <p>Give a rover ultrasonic “eyes” that stop it before it bumps — then teach it to turn.</p>
+              <button class="project-open" type="button" data-project="obstacle-rover" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="7">
+            <div class="project-media">
+              <img src="assets/img/project-dustbin.svg" alt="A smart dustbin with an automatically opening lid and a scrap of paper flying in" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 7</span><span class="badge level-intermediate">Intermediate</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 sessions</span><span>Servo</span></div>
+              <h3>Smart Dustbin</h3>
+              <p>A bin that senses your hand and swings its own lid open with a servo motor.</p>
+              <button class="project-open" type="button" data-project="smart-dustbin" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="7">
+            <div class="project-media">
+              <img src="assets/img/project-linebot.svg" alt="A line-following robot with infrared sensor eyes tracking a black line" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 7</span><span class="badge level-intermediate">Intermediate</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 sessions</span><span>IR sensors</span></div>
+              <h3>Line-Following Robot</h3>
+              <p>Two infrared eyes keep this bot chasing a black line around every corner.</p>
+              <button class="project-open" type="button" data-project="line-follower" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="8">
+            <div class="project-media">
+              <img src="assets/img/project-smarthome.svg" alt="A smart home connected by Wi-Fi to a phone dashboard" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 8</span><span class="badge level-advanced">Advanced</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 sessions</span><span>IoT</span></div>
+              <h3>Smart Home Hub</h3>
+              <p>Flip real lights from a phone dashboard and watch live sensor data stream in.</p>
+              <button class="project-open" type="button" data-project="smart-home" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="8">
+            <div class="project-media">
+              <img src="assets/img/project-plant.svg" alt="A self-watering plant with a soil moisture sensor wired to an Arduino and a water reservoir" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 8</span><span class="badge level-advanced">Advanced</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 sessions</span><span>Automation</span></div>
+              <h3>Self-Watering Plant</h3>
+              <p>A soil sensor tells a tiny pump exactly when your plant is thirsty — no guesswork.</p>
+              <button class="project-open" type="button" data-project="plant-waterer" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-class="8">
+            <div class="project-media">
+              <img src="assets/img/project-weather.svg" alt="A weather station with an anemometer, solar panel and display showing temperature" width="480" height="320" loading="lazy">
+              <div class="project-badges"><span class="badge">Class 8</span><span class="badge level-advanced">Advanced</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 sessions</span><span>Data</span></div>
+              <h3>Weather Station</h3>
+              <p>Measure the sky, display the numbers, then send live weather data to the cloud.</p>
+              <button class="project-open" type="button" data-project="weather-station" aria-haspopup="dialog">Open build plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab" id="lab">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Rover lab · try it now</span>
+          <h2>Teach a rover to stop before it <span class="hl-lime">crashes.</span></h2>
+          <p>Drag the distance slider and watch the exact Arduino logic react. This is the same if–else thinking Class 7 uses to keep their rovers out of trouble.</p>
+        </div>
+
+        <div class="lab-layout">
+          <div class="sim-card" data-reveal>
+            <div class="sim-scene is-moving" id="simScene">
+              <div class="sim-hud"><span class="sim-live-dot" aria-hidden="true"></span> LIVE SIMULATION</div>
+              <svg viewBox="0 0 600 300" class="sim-svg" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="simSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#dff2ff"/>
+                    <stop offset="1" stop-color="#f9fdff"/>
+                  </linearGradient>
+                  <linearGradient id="simFloor" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#eef3f8"/>
+                    <stop offset="1" stop-color="#e2eaf3"/>
+                  </linearGradient>
+                  <pattern id="simTiles" width="60" height="38" patternUnits="userSpaceOnUse">
+                    <path d="M0 0h60v38H0z" fill="none" stroke="#d5e0ec" stroke-width="1.5"/>
+                  </pattern>
+                  <linearGradient id="simBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ffffff"/>
+                    <stop offset="1" stop-color="#e4eefc"/>
+                  </linearGradient>
+                </defs>
+                <rect width="600" height="300" fill="url(#simSky)"/>
+                <circle cx="520" cy="52" r="27" fill="#ffd166"/>
+                <g stroke="#ffd166" stroke-width="3" stroke-linecap="round">
+                  <path d="M520 14v-6M520 96v6M482 52h-6M558 52h6M493 25l-5-5M547 79l5 5M547 25l5-5M493 79l-5 5"/>
+                </g>
+                <g fill="#ffffff" opacity=".92">
+                  <path d="M56 70c0-8 7-14 15-14 6 0 11 3 13 8 2-1 4-1 5-1 7 0 13 5 13 12H56z"/>
+                  <path d="M338 94c0-6 5-11 12-11 4 0 8 2 9 6 1-1 3-1 4-1 6 0 10 4 10 10h-35z" opacity=".75"/>
+                </g>
+                <g stroke="#9fc0e8" stroke-width="2.5" stroke-linecap="round" opacity=".6">
+                  <path d="M280 48c4-4 10-4 14 0M300 52c3-3 8-3 11 0"/>
+                  <circle cx="230" cy="90" r="3" fill="#9fc0e8" stroke="none"/>
+                </g>
+
+                <rect y="224" width="600" height="76" fill="url(#simFloor)"/>
+                <rect y="224" width="600" height="76" fill="url(#simTiles)"/>
+                <path d="M0 224h600" stroke="#c6d5e5" stroke-width="3"/>
+
+                <g class="sim-rover" id="simRover">
+                  <ellipse cx="166" cy="260" rx="80" ry="10" fill="#11263f" opacity=".13"/>
+                  <g stroke="#22d3ee" stroke-width="4" stroke-linecap="round" class="speed-line">
+                    <path d="M52 184h26"/><path d="M40 202h34"/><path d="M62 220h20"/>
+                  </g>
+                  <g class="sim-wheel">
+                    <circle cx="130" cy="230" r="27" fill="#1f2937" stroke="#11263f" stroke-width="4"/>
+                    <circle cx="130" cy="230" r="10" fill="#cbd5e1" stroke="#11263f" stroke-width="3"/>
+                    <path d="M130 208v12M130 240v12M108 230h12M140 230h12" stroke="#64748b" stroke-width="3.5" stroke-linecap="round"/>
+                  </g>
+                  <g class="sim-wheel">
+                    <circle cx="202" cy="230" r="27" fill="#1f2937" stroke="#11263f" stroke-width="4"/>
+                    <circle cx="202" cy="230" r="10" fill="#cbd5e1" stroke="#11263f" stroke-width="3"/>
+                    <path d="M202 208v12M202 240v12M180 230h12M212 230h12" stroke="#64748b" stroke-width="3.5" stroke-linecap="round"/>
+                  </g>
+                  <path d="M118 172v-28" stroke="#11263f" stroke-width="4.5" stroke-linecap="round"/>
+                  <circle cx="118" cy="136" r="8" fill="#b6f24a" stroke="#11263f" stroke-width="3.5"/>
+                  <rect x="97" y="170" width="134" height="62" rx="18" fill="url(#simBody)" stroke="#11263f" stroke-width="4.5"/>
+                  <rect x="105" y="206" width="118" height="12" rx="6" fill="#2f6bff"/>
+                  <path d="M112 190h34" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="165" cy="190" r="3.5" fill="#94a3b8"/>
+                  <circle cx="186" cy="220" r="10" fill="#e2e8f0" stroke="#11263f" stroke-width="3"/>
+                  <rect x="225" y="181" width="17" height="32" rx="7" fill="#cbd5e1" stroke="#11263f" stroke-width="3.5"/>
+                  <circle cx="233.5" cy="190" r="4.5" fill="#334155"/>
+                  <circle cx="233.5" cy="204" r="4.5" fill="#334155"/>
+                  <circle cx="213" cy="222" r="4.5" class="sim-led-fill" fill="#b6f24a" stroke="#11263f" stroke-width="2"/>
+                  <circle cx="248" cy="205" r="15" fill="#b6f24a" opacity=".12"/>
+                  <g class="sim-brake">
+                    <circle cx="238" cy="150" r="16" fill="#ff6b5e" stroke="#11263f" stroke-width="3"/>
+                    <path d="M238 141v11" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+                    <circle cx="238" cy="158.5" r="2" fill="#fff"/>
+                  </g>
+                </g>
+
+                <g class="sim-crate">
+                  <rect x="470" y="186" width="74" height="70" rx="4" fill="#e9b872" stroke="#11263f" stroke-width="4.5"/>
+                  <path d="M470 203h74M470 240h74M489 186v70M525 186v70" stroke="#c58f4c" stroke-width="3" opacity=".7"/>
+                  <path d="M483 196l48 50M531 196l-48 50" stroke="#b97f3d" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+                  <rect x="489" y="214" width="36" height="18" rx="4" fill="#fff4d8" stroke="#11263f" stroke-width="2.5"/>
+                  <path d="M498 223h18" stroke="#8a6a31" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M458 248h10M452 257h16" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <g fill="#94a3b8">
+                  <circle cx="412" cy="258" r="2.5"/><circle cx="438" cy="248" r="1.8"/><circle cx="84" cy="246" r="2"/>
+                </g>
+                <path d="M352 174l8 8m0-8l-8 8" stroke="#ff6b5e" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+              </svg>
+            </div>
+
+            <div class="sim-controls">
+              <div class="slider-head">
+                <label for="distanceRange">Distance to obstacle</label>
+                <output id="distanceOut" for="distanceRange">70 cm</output>
+              </div>
+              <input type="range" id="distanceRange" min="5" max="80" step="1" value="70" aria-describedby="thresholdHint">
+              <div class="range-scale" id="thresholdHint"><span>5 cm</span><span class="threshold">safety stop &lt; 25</span><span>80 cm</span></div>
+
+              <div class="sim-actions">
+                <button class="btn btn-lime" id="simRun" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 4 14 8-14 8V4Z"/></svg>
+                  Run test
+                </button>
+                <button class="btn btn-ghost-dark" id="simReset" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+                  Reset
+                </button>
+              </div>
+
+              <div class="sim-readouts">
+                <div class="readout"><span>Distance</span><strong id="simDistance">70 cm</strong></div>
+                <div class="readout"><span>Motor</span><strong id="simMotor" class="green">forward()</strong></div>
+                <div class="readout"><span>LED</span><strong id="simLed" class="green">GREEN</strong></div>
+              </div>
+              <p class="sim-status" id="simStatus"><span class="dot" aria-hidden="true"></span><span id="simStatusText">All clear — keep rolling.</span></p>
+            </div>
+          </div>
+
+          <div class="lab-side">
+            <div class="code-card" data-reveal style="--delay:.08s">
+              <div class="code-bar">
+                <span class="code-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="code-name">rover_brains.ino</span>
+                <span class="code-lang">ARDUINO C++</span>
+              </div>
+              <div class="code-body" id="simCode" role="group" aria-label="Example Arduino code for the rover">
+                <div class="code-line" data-line="1"><span class="ln">1</span><code><span class="tok-comment">// How far away is the wall?</span></code></div>
+                <div class="code-line" data-line="2"><span class="ln">2</span><code><span class="tok-type">int</span> d = <span class="tok-fn">sonar.ping_cm</span>();</code></div>
+                <div class="code-line" data-line="3"><span class="ln">3</span><code> </code></div>
+                <div class="code-line" data-line="4"><span class="ln">4</span><code><span class="tok-key">if</span> (d &lt; <span class="tok-num">25</span>) {</code></div>
+                <div class="code-line" data-line="5"><span class="ln">5</span><code>  motors.<span class="tok-fn">stop</span>();  <span class="tok-comment">// brake!</span></code></div>
+                <div class="code-line" data-line="6"><span class="ln">6</span><code>  led.<span class="tok-fn">set</span>(<span class="tok-bool">RED</span>);</code></div>
+                <div class="code-line" data-line="7"><span class="ln">7</span><code>} <span class="tok-key">else</span> {</code></div>
+                <div class="code-line" data-line="8"><span class="ln">8</span><code>  motors.<span class="tok-fn">forward</span>();</code></div>
+                <div class="code-line" data-line="9"><span class="ln">9</span><code>  led.<span class="tok-fn">set</span>(<span class="tok-bool">GREEN</span>);</code></div>
+                <div class="code-line" data-line="10"><span class="ln">10</span><code>}</code></div>
+              </div>
+              <div class="code-foot" id="simCodeFooter">
+                <span class="dot" aria-hidden="true"></span>
+                <span id="simCodeNote">Loop running · 20 checks every second</span>
+              </div>
+            </div>
+
+            <div class="lab-tip" data-reveal>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.8.6 1 1.3 1 2.3h6c0-1 .2-1.7 1-2.3A7 7 0 0 0 12 2Z"/></svg>
+              <p><strong>Change one number, change everything.</strong> The rover loops through that <code>if</code> statement 20 times a second. Push the distance below 25 cm and the brake branch takes over.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section kit" id="kit">
+      <div class="container">
+        <div class="kit-layout">
+          <div class="kit-content">
+            <div class="section-head left" data-reveal>
+              <span class="eyebrow">Inside the maker kit</span>
+              <h2>Everything is in the box. <span class="hl">Really.</span></h2>
+              <p>No shopping lists for parents, no missing parts on lab day. Every learner gets a labelled kit, a laptop station and a mentor who knows when to step in — and when to let them figure it out.</p>
+            </div>
+
+            <div class="kit-grid" data-reveal>
+              <div class="kit-item">
+                <span class="kit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="22" height="17" rx="2.5"/><rect x="10" y="12" width="8" height="6" rx="1"/><path d="M8 5v3M12 5v3M16 5v3M20 5v3M24 5v3M8 25v3M12 25v3M16 25v3M20 25v3M24 25v3"/><circle cx="23" cy="15" r="1.5"/></svg>
+                </span>
+                <div><h3>Arduino Uno</h3><p>The brain that reads inputs and drives outputs.</p></div>
+              </div>
+              <div class="kit-item">
+                <span class="kit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="26" height="16" rx="2.5"/><path d="M8 13h.01M12 13h.01M16 13h.01M20 13h.01M24 13h.01M8 18h.01M12 18h.01M16 18h.01M20 18h.01M24 18h.01"/><path d="M14 16h4" opacity=".5"/></svg>
+                </span>
+                <div><h3>Breadboard</h3><p>Snap circuits together — no soldering needed.</p></div>
+              </div>
+              <div class="kit-item">
+                <span class="kit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="13" height="12" rx="3"/><circle cx="9" cy="14" r="1.4"/><circle cx="14" cy="14" r="1.4"/><path d="M22 13c2 1.7 2 4.3 0 6M25 10c4 3.4 4 8.6 0 12"/></svg>
+                </span>
+                <div><h3>Sensor pack</h3><p>Ultrasonic, IR, light, soil and temperature.</p></div>
+              </div>
+              <div class="kit-item">
+                <span class="kit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="18" r="7"/><circle cx="14" cy="18" r="2.5"/><path d="M14 11V6h8"/><path d="M19 4h6v6"/><path d="M7 18H3M14 25v3"/></svg>
+                </span>
+                <div><h3>Motors &amp; servos</h3><p>Spin wheels, wave arms, open lids.</p></div>
+              </div>
+              <div class="kit-item">
+                <span class="kit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22c5-1 5-10 10-10s5 9 10 9"/><path d="M4 27c5-1 5-10 10-10s5 9 10 9"/><rect x="3" y="19" width="4" height="4" rx="1"/><rect x="25" y="19" width="4" height="4" rx="1"/><path d="M8 6h5M8 10h2M24 7v5M21 9h6"/></svg>
+                </span>
+                <div><h3>Jumper wires</h3><p>Colour-coded cables for every connection.</p></div>
+              </div>
+              <div class="kit-item">
+                <span class="kit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="12" width="14" height="14" rx="2.5"/><rect x="13" y="16" width="6" height="5" rx="1"/><path d="M12 24v3M16 24v3M20 24v3"/><path d="M16 12V8M16 4c4 0 7 2 8 5M16 8c2.5 0 4.5 1 5.5 3"/></svg>
+                </span>
+                <div><h3>ESP32 Wi-Fi board</h3><p>The IoT brain behind every Class 8 cloud project.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="parent-card" data-reveal style="--delay:.1s">
+            <span class="eyebrow dark">For parents</span>
+            <h3>Serious skills. Zero screen-time guilt.</h3>
+            <p>Every session is 90 minutes of designing, wiring and debugging with a mentor close by. Kids build confidence — and something real they can show you.</p>
+            <ul class="parent-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Weekly 90-minute lab, after school or weekend</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>1:8 mentor ratio — never a crowded bench</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>All kits, laptops and materials included</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Low-voltage, safety-first — no soldering before Class 8</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Demo Day every term + a project video to keep</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Certificate of joining for every learner</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Medals for project winners at Demo Day</li>
+            </ul>
+            <a class="btn btn-lime btn-block" href="#enroll">
+              Book a free trial
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <p class="parent-foot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+              No experience or equipment required.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section enroll" id="enroll">
+      <div class="container">
+        <div class="enroll-card">
+          <div class="enroll-copy">
+            <span class="eyebrow dark">Start here</span>
+            <h2>Ready to build something that <span class="hl-lime">moves?</span></h2>
+            <p>Book a free 45-minute trial. Your child wires a circuit, writes a line of code and takes home a blinking LED. No experience needed — just curiosity.</p>
+            <ul class="enroll-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>45-minute hands-on trial session</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>At our lab or at your school</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Weekday and weekend batches</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>All equipment provided, nothing to buy</li>
+            </ul>
+            <div class="enroll-contact">
+              <span>Questions? Talk to a human:</span>
+              <a href="mailto:hello@roboquest.school">hello@roboquest.school</a>
+              <a href="tel:+919876543210">+91&nbsp;98765&nbsp;43210</a>
+            </div>
+          </div>
+
+          <div class="enroll-form-wrap">
+            <div class="form-head" id="formHead">
+              <h3>Book a free trial</h3>
+              <p>45 minutes. One grown-up. One very proud kid.</p>
+            </div>
+
+            <form id="enrollForm" novalidate>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="studentName">Student’s name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="studentName" name="studentName" autocomplete="name" placeholder="e.g. Aarav Sharma" required aria-describedby="nameError">
+                  <p class="error" id="nameError"></p>
+                </div>
+                <div class="field">
+                  <label for="studentClass">Class <span class="req" aria-hidden="true">*</span></label>
+                  <select id="studentClass" name="studentClass" required aria-describedby="classError">
+                    <option value="">Choose a class</option>
+                    <option value="6">Class 6 · Spark Starters</option>
+                    <option value="7">Class 7 · Circuit Coders</option>
+                    <option value="8">Class 8 · IoT Inventors</option>
+                  </select>
+                  <p class="error" id="classError"></p>
+                </div>
+                <div class="field">
+                  <label for="batch">Preferred batch</label>
+                  <select id="batch" name="batch">
+                    <option value="">Any batch works</option>
+                    <option>Weekday · 4:30 pm</option>
+                    <option>Saturday · 10:00 am</option>
+                    <option>Saturday · 12:00 pm</option>
+                    <option>Sunday · 10:00 am</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="parentEmail">Parent email <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="parentEmail" name="parentEmail" autocomplete="email" placeholder="you@example.com" required aria-describedby="emailError">
+                  <p class="error" id="emailError"></p>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone <span class="optional">(optional)</span></label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+91 98765 43210">
+                </div>
+                <div class="field full">
+                  <label for="message">Anything we should know? <span class="optional">(optional)</span></label>
+                  <textarea id="message" name="message" rows="3" placeholder="A shy kid? A robot-obsessed kid? A specific project idea?"></textarea>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">
+                Request my free trial
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="form-note">We reply within one school day. Your details stay private — no spam, ever.</p>
+            </form>
+
+            <div class="enroll-success" id="enrollSuccess" hidden role="status" tabindex="-1">
+              <div class="success-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <h3>You’re on the list!</h3>
+              <p id="successText">We’ve saved your trial request and will be in touch within one school day.</p>
+              <button class="btn btn-outline" id="bookAnother" type="button">Book another trial</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#top" aria-label="RoboQuest home">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 2 4 14h6l-1 8 9.5-12h-6l1-8Z"/></svg>
+            </span>
+            <span>Robo<span class="logo-accent">Quest</span></span>
+          </a>
+          <p>A hands-on STEM robotics and IoT lab for Class 6–8. We build stubborn little robots and quietly confident problem-solvers.</p>
+          <span class="footer-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9L12 3Z"/></svg>
+            Built for curious minds
+          </span>
+        </div>
+
+        <nav class="footer-col" aria-label="Explore">
+          <h3>Explore</h3>
+          <a href="#journey">The journey</a>
+          <a href="#classes">Class tracks</a>
+          <a href="#projects">Student projects</a>
+          <a href="#lab">Rover lab</a>
+          <a href="credits.html">Photo credits</a>
+        </nav>
+
+        <nav class="footer-col" aria-label="Programs">
+          <h3>Programs</h3>
+          <a href="#classes">Class 6 · Spark Starters</a>
+          <a href="#classes">Class 7 · Circuit Coders</a>
+          <a href="#classes">Class 8 · IoT Inventors</a>
+          <a href="#kit">Inside the kit</a>
+          <a href="#enroll">Free trial session</a>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Say hello</h3>
+          <a href="mailto:hello@roboquest.school">hello@roboquest.school</a>
+          <a href="tel:+919876543210">+91&nbsp;98765&nbsp;43210</a>
+          <p>At our lab &amp; partner schools<br>Mon–Sat · 9:00 am – 7:00 pm</p>
+          <p class="footer-small">No prior coding or robotics experience required. Ever.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> RoboQuest STEM Lab. All circuits reserved.</p>
+        <p>Made with
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 2 4 14h6l-1 8 9.5-12h-6l1-8Z"/></svg>
+          and a lot of jumper wires.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="projectModal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card" id="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+      <button class="modal-close" id="modalClose" type="button" data-close-modal aria-label="Close build plan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="modal-media">
+        <img id="modalImg" src="assets/img/project-blinky.svg" alt="" width="480" height="320">
+      </div>
+      <div class="modal-body">
+        <div class="modal-badges" id="modalBadges"></div>
+        <h2 id="modalTitle">Build plan</h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-meta" id="modalMeta"></div>
+        <section class="modal-gallery" aria-labelledby="galleryHeading">
+          <div class="modal-gallery-head">
+            <h3 id="galleryHeading">Real lab inspiration</h3>
+            <span>Students + builds</span>
+          </div>
+          <div class="modal-photos" id="modalPhotos"></div>
+          <p class="modal-photo-note">
+            Representative photos from the maker community, not RoboQuest students.
+            <a href="credits.html" target="_blank" rel="noopener">See photo credits</a>.
+          </p>
+        </section>
+        <div class="modal-columns">
+          <section class="modal-section" aria-labelledby="materialsHeading">
+            <h3 id="materialsHeading">What you’ll need</h3>
+            <ul class="modal-materials" id="modalMaterials"></ul>
+          </section>
+          <section class="modal-section" aria-labelledby="stepsHeading">
+            <h3 id="stepsHeading">Step by step</h3>
+            <ol class="modal-steps" id="modalSteps"></ol>
+          </section>
+        </div>
+        <section class="modal-section" aria-labelledby="skillsHeading">
+          <h3 id="skillsHeading">Skills unlocked</h3>
+          <div class="skill-chips" id="modalSkills"></div>
+        </section>
+        <div class="modal-cta">
+          <p>This build is part of the <strong id="modalClassLabel">Class 6</strong> track. <span>No equipment needed for the free trial.</span></p>
+          <button class="btn btn-primary" id="modalBook" type="button">
+            Book this track
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/data-hi.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/widgets.js" defer></script>
+</body>
+</html>
