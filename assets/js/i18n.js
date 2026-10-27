@@ -1,6 +1,7 @@
 /* ============================================================
    RoboQuest — English / Hindi language switching
-   - Persists the chosen language
+   - Defaults to English on every page load
+   - The header button switches to Hindi and back
    - Translates static copy, attributes and metadata
    - Exposes RQ_I18N.t() for dynamic UI strings
    ============================================================ */
@@ -8,7 +9,6 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "roboquest-language";
   const SUPPORTED = ["en", "hi"];
 
   const STRINGS = {
@@ -43,8 +43,8 @@
       "form.classError": "Choose a class so we can plan the right session.",
       "form.emailError": "Please add a parent email we can reply to.",
       "form.emailInvalid": "That email doesn't look quite right. Please check it.",
-      "form.successNoBatch": "Thanks, {name}. Your free trial request for Class {n} is saved. We'll email {email} within one school day with available batch times.",
-      "form.successBatch": "Thanks, {name}. Your free trial request for Class {n} is saved. We'll email {email} within one school day with {batch} options."
+      "form.successNoBatch": "Thanks, {name}. Your booking request for Class {n} is saved. We'll contact you within one school day with available batch times.",
+      "form.successBatch": "Thanks, {name}. Your booking request for Class {n} is saved. We'll contact you within one school day with {batch} options."
     },
     hi: {
       "meta.home.title": "RoboQuest — असली रोबोट बनाएँ | कक्षा 6–8 के लिए STEM रोबोटिक्स और IoT",
@@ -77,8 +77,8 @@
       "form.classError": "कृपया कक्षा चुनें ताकि हम सही सत्र की योजना बना सकें।",
       "form.emailError": "कृपया अभिभावक का ईमेल लिखें जिस पर हम जवाब दे सकें।",
       "form.emailInvalid": "यह ईमेल सही नहीं लग रहा है। कृपया इसे जाँचें।",
-      "form.successNoBatch": "धन्यवाद, {name}! कक्षा {n} के लिए आपका फ्री ट्रायल अनुरोध सेव हो गया है। हम एक कार्यदिवस के भीतर {email} पर उपलब्ध बैच समय के साथ संपर्क करेंगे।",
-      "form.successBatch": "धन्यवाद, {name}! कक्षा {n} के लिए आपका फ्री ट्रायल अनुरोध सेव हो गया है। हम एक कार्यदिवस के भीतर {email} पर {batch} के विकल्पों के साथ संपर्क करेंगे।"
+      "form.successNoBatch": "धन्यवाद, {name}! कक्षा {n} के लिए आपका बुकिंग अनुरोध सेव हो गया है। हम एक कार्यदिवस के भीतर उपलब्ध बैच समय के साथ संपर्क करेंगे।",
+      "form.successBatch": "धन्यवाद, {name}! कक्षा {n} के लिए आपका बुकिंग अनुरोध सेव हो गया है। हम एक कार्यदिवस के भीतर {batch} के विकल्पों के साथ संपर्क करेंगे।"
     }
   };
 
@@ -90,7 +90,7 @@
     "Class tracks": "कक्षा ट्रैक",
     "Projects": "प्रोजेक्ट्स",
     "Rover lab": "रोवर लैब",
-    "Book a free trial": "फ्री ट्रायल बुक करें",
+    "Book now": "अभी बुक करें",
     "Open menu": "मेन्यू खोलें",
     "Close menu": "मेन्यू बंद करें",
 
@@ -258,6 +258,16 @@
     "Colour-coded cables for every connection.": "हर कनेक्शन के लिए रंग-कोडेड केबल।",
     "ESP32 Wi-Fi board": "ESP32 Wi-Fi बोर्ड",
     "The IoT brain behind every Class 8 cloud project.": "हर कक्षा 8 क्लाउड प्रोजेक्ट के पीछे का IoT दिमाग़।",
+    "Certificates & medals": "सर्टिफिकेट और मेडल",
+    "Recognition that": "ऐसा सम्मान जो",
+    "lasts.": "हमेशा रहे।",
+    "Every learner gets a certificate of joining. After the final project, learners receive a completion certificate and project winners take home medals.": "हर छात्र को जॉइनिंग सर्टिफिकेट मिलता है। फाइनल प्रोजेक्ट के बाद छात्रों को कम्प्लीशन सर्टिफिकेट और प्रोजेक्ट विजेताओं को मेडल मिलते हैं।",
+    "Certificate of joining": "जॉइनिंग सर्टिफिकेट",
+    "Every learner receives one when they join the programme.": "प्रोग्राम जॉइन करते ही हर छात्र को यह मिलता है।",
+    "Completion certificate": "कम्प्लीशन सर्टिफिकेट",
+    "Awarded after the final project is completed.": "फाइनल प्रोजेक्ट पूरा होने के बाद दिया जाता है।",
+    "Winner medals": "विजेताओं को मेडल",
+    "Project winners receive medals after completion.": "प्रोजेक्ट विजेताओं को कम्प्लीशन के बाद मेडल मिलते हैं।",
     "For parents": "माता-पिता के लिए",
     "Serious skills. Zero screen-time guilt.": "गंभीर स्किल्स। स्क्रीन-टाइम की कोई गिल्ट नहीं।",
     "Every session is 90 minutes of designing, wiring and debugging with a mentor close by. Kids build confidence — and something real they can show you.": "हर सत्र 90 मिनट का होता है — डिज़ाइन, वायरिंग और डिबगिंग, मेंटर पास में। बच्चे आत्मविश्वास बनाते हैं — और कुछ असली बनाते हैं जो वे आपको दिखा सकें।",
@@ -267,14 +277,14 @@
     "Low-voltage, safety-first — no soldering before Class 8": "कम वोल्टेज, सुरक्षा पहले — कक्षा 8 से पहले सोल्डरिंग नहीं",
     "Demo Day every term + a project video to keep": "हर टर्म में डेमो डे + अपने पास रखने के लिए प्रोजेक्ट वीडियो",
     "Certificate of joining for every learner": "हर छात्र के लिए जॉइनिंग सर्टिफिकेट",
-    "Medals for project winners at Demo Day": "डेमो डे पर प्रोजेक्ट विजेताओं को मेडल",
+    "Completion certificate + medals for project winners after the final project": "फाइनल प्रोजेक्ट के बाद कम्प्लीशन सर्टिफिकेट और प्रोजेक्ट विजेताओं को मेडल",
     "No experience or equipment required.": "कोई अनुभव या उपकरण ज़रूरी नहीं।",
 
     "Start here": "यहाँ से शुरू करें",
     "Ready to build something that": "कुछ ऐसा बनाने के लिए तैयार जो",
     "moves?": "चले?",
-    "Book a free 45-minute trial. Your child wires a circuit, writes a line of code and takes home a blinking LED. No experience needed — just curiosity.": "45 मिनट का फ्री ट्रायल बुक करें। आपका बच्चा सर्किट जोड़ेगा, एक लाइन कोड लिखेगा और घर एक जलती LED लेकर जाएगा। अनुभव की ज़रूरत नहीं — बस जिज्ञासा।",
-    "45-minute hands-on trial session": "45 मिनट का प्रैक्टिकल ट्रायल सत्र",
+    "Book a 45-minute hands-on session. Your child wires a circuit, writes a line of code and takes home a blinking LED. No experience needed — just curiosity.": "45 मिनट का प्रैक्टिकल सेशन बुक करें। आपका बच्चा सर्किट जोड़ेगा, एक लाइन कोड लिखेगा और घर एक जलती LED लेकर जाएगा। अनुभव की ज़रूरत नहीं — बस जिज्ञासा।",
+    "45-minute hands-on session": "45 मिनट का प्रैक्टिकल सेशन",
     "At our lab or at your school": "हमारी लैब में या आपके स्कूल में",
     "Weekday and weekend batches": "वीकडे और वीकेंड बैच",
     "All equipment provided, nothing to buy": "सारा सामान मिलेगा, कुछ खरीदना नहीं",
@@ -298,11 +308,11 @@
     "(optional)": "(वैकल्पिक)",
     "Anything we should know?": "कुछ और जो हमें पता होना चाहिए?",
     "A shy kid? A robot-obsessed kid? A specific project idea?": "शर्मीला बच्चा? रोबोट का दीवाना बच्चा? कोई खास प्रोजेक्ट आइडिया?",
-    "Request my free trial": "मेरा फ्री ट्रायल अनुरोध करें",
+    "Send booking request": "बुकिंग अनुरोध भेजें",
     "We reply within one school day. Your details stay private — no spam, ever.": "हम एक स्कूल दिन के भीतर जवाब देते हैं। आपकी जानकारी निजी रहती है — कभी स्पैम नहीं।",
     "You're on the list!": "आप लिस्ट में हैं!",
-    "We've saved your trial request and will be in touch within one school day.": "हमने आपका ट्रायल अनुरोध सेव कर लिया है और एक स्कूल दिन के भीतर संपर्क करेंगे।",
-    "Book another trial": "एक और ट्रायल बुक करें",
+    "We've saved your booking request and will be in touch within one school day.": "हमने आपका बुकिंग अनुरोध सेव कर लिया है और एक स्कूल दिन के भीतर संपर्क करेंगे।",
+    "Book another session": "एक और सेशन बुक करें",
 
     "A hands-on STEM robotics and IoT lab for Class 6-8. We build stubborn little robots and quietly confident problem-solvers.": "कक्षा 6–8 के लिए एक प्रैक्टिकल STEM रोबोटिक्स और IoT लैब। हम ज़िद्दी छोटे रोबोट और शांत आत्मविश्वास वाले समस्या-समाधानकर्ता बनाते हैं।",
     "Built for curious minds": "जिज्ञासु दिमाग़ों के लिए बना",
@@ -312,7 +322,7 @@
     "Photo credits": "फ़ोटो क्रेडिट",
     "Programs": "प्रोग्राम्स",
     "Inside the kit": "किट के अंदर",
-    "Free trial session": "फ्री ट्रायल सत्र",
+    "Book a session": "सेशन बुक करें",
     "Say hello": "हमसे जुड़ें",
     "At our lab & partner schools": "हमारी लैब और पार्टनर स्कूलों में",
     "Mon-Sat · 9:00 am - 7:00 pm": "सोम–शनि · सुबह 9:00 – शाम 7:00",
@@ -333,7 +343,7 @@
     "Skills unlocked": "सीखे गए स्किल्स",
     "This build is part of the": "यह बिल्ड इसका हिस्सा है:",
     "track.": "ट्रैक।",
-    "No equipment needed for the free trial.": "फ्री ट्रायल के लिए कोई उपकरण ज़रूरी नहीं।",
+    "No equipment needed for your first session.": "पहले सेशन के लिए कोई उपकरण ज़रूरी नहीं।",
     "Book this track": "यह ट्रैक बुक करें",
     "In the lab": "लैब में",
     "The build": "बिल्ड",
@@ -524,26 +534,11 @@
     document.documentElement.lang = lang;
     document.documentElement.dir = "ltr";
 
-    if (options.persist !== false) {
-      try {
-        localStorage.setItem(STORAGE_KEY, lang);
-      } catch (error) {
-        /* Storage can be unavailable in private browsing; the page still works. */
-      }
-    }
-
     applyLanguage();
 
     if (options.announce !== false) {
       document.dispatchEvent(new CustomEvent("rq:languagechange", { detail: { lang } }));
     }
-  }
-
-  let saved = null;
-  try {
-    saved = localStorage.getItem(STORAGE_KEY);
-  } catch (error) {
-    saved = null;
   }
 
   window.RQ_I18N = {
@@ -562,5 +557,5 @@
     setLanguage(currentLang === "en" ? "hi" : "en");
   });
 
-  setLanguage(SUPPORTED.includes(saved) ? saved : "en", { persist: false, announce: false });
+  setLanguage("en", { announce: false });
 })();

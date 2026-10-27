@@ -269,6 +269,11 @@
   .kit-item { padding: 13px; }
   .kit-icon { width: 40px; height: 40px; }
   .kit-icon svg { width: 23px; height: 23px; }
+  .recognition-grid { grid-template-columns: 1fr; }
+  .recognition-card.recognition-wide { grid-column: auto; }
+  .recognition-card { padding: 17px; }
+  .recognition-icon { width: 43px; height: 43px; }
+  .recognition-icon svg { width: 24px; height: 24px; }
 
   .site-footer { padding-top: 40px; }
   .footer-grid { padding-bottom: 26px; }

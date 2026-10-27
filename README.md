@@ -1,6 +1,6 @@
 # RoboQuest
 
-An interactive, static website introducing robotics, Arduino and IoT to students in Classes 6–8. It includes three class tracks, a six-stage project journey, nine illustrated builds, a live rover simulator, and a free-trial enquiry form. The whole experience is available in English and Hindi.
+An interactive, static website introducing robotics, Arduino and IoT to students in Classes 6–8. It includes three class tracks, a six-stage project journey, nine illustrated builds, a live rover simulator, and a booking enquiry form. The whole experience is available in English and Hindi.
 
 ## Run it
 
@@ -18,13 +18,13 @@ The second option is useful if your browser restricts local scripts. The Google 
 - **Nine projects** — every card opens a build plan with materials, steps, skills, and two real photographs.
 - **Rover lab** — an interactive distance sensor / motor / LED simulator.
 - **Enrolment form** — client-side validation and a success state. It does not send data anywhere.
-- **Recognition** — every learner receives a certificate of joining, and project winners receive medals at Demo Day.
+- **Recognition** — every learner receives a certificate of joining; after the final project, learners receive a completion certificate and project winners receive medals.
 - **Photo credits** — full sources and licences are listed on `credits.html`.
-- **English / हिंदी switch** — the button in the header changes the entire interface, including project popups, the journey, the simulator, form messages and the credits page.
+- **English / हिंदी switch** — the site opens in English by default; the header button changes the entire interface, including project popups, the journey, the simulator, form messages and the credits page.
 
 ## Language
 
-The language button in the header switches the whole site between English and Hindi. The choice is saved in `localStorage` under `roboquest-language`, so it carries across reloads and between `index.html` and `credits.html`. The page also updates its `<html lang>` attribute, title and meta description.
+The site opens in English by default on every page load. The language button in the header switches the whole site between English and Hindi at any time. The page also updates its `<html lang>` attribute, title and meta description.
 
 Technical names, code, email addresses and brand names such as Arduino, ESP32, LED, IoT and Wi-Fi stay in English inside the Hindi copy. Hindi text uses Noto Sans Devanagari as a fallback behind the site’s Latin display and body fonts.
 
@@ -46,7 +46,7 @@ assets/
   css/
     styles.css             Design tokens, header, hero, buttons
     sections.css           Journey, class tracks, projects
-    extras.css             Lab, kit, enrolment, footer, modal gallery, credits
+    extras.css             Lab, kit, recognition, enrolment, footer, modal gallery, credits
     responsive.css         Breakpoints and reduced-motion rules
   js/
     data.js                Journey, project, photo and mascot content
@@ -62,6 +62,6 @@ assets/
 
 ## Notes
 
-- The email address and phone number are placeholders; update them before publishing.
+- The email address is a placeholder; update it before publishing. The phone and WhatsApp links use +91 95694 77034.
 - The enquiry form is deliberately front-end only. Connect it to a real endpoint before collecting submissions.
 - All project illustrations and the mascot are original SVG artwork made for this site.

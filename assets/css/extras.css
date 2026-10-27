@@ -428,6 +428,54 @@ input[type="range"]::-moz-range-track {
   font-size: 0.75rem;
   line-height: 1.5;
 }
+
+/* ---------- Certificates & medals ---------- */
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.recognition-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #e8eef8;
+  border-radius: 18px;
+  background: #f8faff;
+}
+.recognition-card.recognition-wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+}
+.recognition-icon {
+  display: grid;
+  place-items: center;
+  width: 48px; height: 48px;
+  flex: none;
+  border: 1px solid #dce7f7;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--blue);
+}
+.recognition-icon svg { width: 27px; height: 27px; }
+.recognition-card h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+}
+.recognition-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.recognition-wide > div { min-width: 0; }
 .parent-card {
   position: relative;
   overflow: hidden;
@@ -495,6 +543,23 @@ input[type="range"]::-moz-range-track {
   color: var(--lime);
 }
 .parent-card .btn { min-height: 47px; font-size: 0.87rem; }
+.parent-call {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 0;
+  color: #aebdd3;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.parent-call svg { width: 15px; height: 15px; flex: none; color: var(--lime); }
+.parent-call a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.parent-call a:hover { color: var(--lime); }
 .parent-foot {
   display: flex;
   align-items: center;
