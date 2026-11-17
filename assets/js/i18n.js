@@ -321,6 +321,8 @@
     "Student projects": "छात्रों के प्रोजेक्ट्स",
     "Photo credits": "फ़ोटो क्रेडिट",
     "Programs": "प्रोग्राम्स",
+    "For schools": "स्कूलों के लिए",
+    "RoboQuest for schools": "स्कूलों के लिए RoboQuest",
     "Inside the kit": "किट के अंदर",
     "Book a session": "सेशन बुक करें",
     "Say hello": "हमसे जुड़ें",
